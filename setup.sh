@@ -21,7 +21,7 @@ db    db d8888b. db    db d8b   db d888888b db    db   .d888b.    d8888b. d88888
 SDR
 
 cat << "WCB"
-Welcome this script will setup your Dell XPS for Ubuntu or Debian 22.04!
+Welcome this script will setup your Dell XPS or Precision (SoonTM) for Ubuntu or Debian 22.04!
 This script will ask you basic Yes or No questions!
 
 
