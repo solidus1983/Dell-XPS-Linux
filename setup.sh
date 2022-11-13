@@ -625,8 +625,8 @@ clear
 # Clean up time 
 sudo apt autoremove -y -qq
 rm ~/*.deb
-
 # Completed
+while true; do
 echo "Script Completed Reboot Time!"
 read -p "Reboot Now? (y/n)" choice 
   case "$choice" in 
@@ -635,6 +635,6 @@ echo "Rebooting System!"
 sudo shutdown -r now; break;;
     n|N ) 
     echo "Please reboot your system soon!"; break;;
-    * ) echo "invalid";;
-  esac
+ esac
 done
+exit
