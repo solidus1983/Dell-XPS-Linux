@@ -59,7 +59,6 @@ sudo apt install \
     libfprint-2-tod1 \
     libfprint-2-tod-dev \
     libpam-fprintd \
-    libcamhal-common \
     libcamhal-ipu6ep-common \
     libipu6ep \
     gstreamer1.0-icamera \
