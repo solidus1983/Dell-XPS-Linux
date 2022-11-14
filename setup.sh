@@ -153,8 +153,7 @@ sudo gpasswd -a $USER input
 sudo apt install \
     neofetch \
     simplescreenrecorder \
-    htop \
-    ufw -y -qq; break;;
+    htop -y -qq; break;;
     n|N ) 
     echo "Skipping Install Basic Software and GPG-Keys"; break;;
     * ) echo "invalid";;
