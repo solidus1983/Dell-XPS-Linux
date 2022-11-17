@@ -294,7 +294,7 @@ sudo apt install \
 # Installing Developer Apps Still (You didn't think it was over did you?)
 sudo apt install docker-ce docker-ce-cli docker-compose containerd.io code -y -qq
 sudo python3 -m pip install -U pip setuptools wheel
-python3 -m pip install --user black
+python3 -m pip install --user $USER
 
 
 # Setting groups for Software
