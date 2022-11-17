@@ -33,16 +33,18 @@ read -p "Is this Device an XPS 13 (y/n)" choice
   case "$choice" in 
     y|Y ) 
 echo "Install Kernel and Drivers for XPS 13"
-cat <<"xps13-1" | sudo tee /etc/apt/sources.list.d/oem-somerville-tentacool-meta.list
-deb http://dell.archive.canonical.com/ jammy somerville
-# deb-src http://dell.archive.canonical.com/ jammy somerville
-deb http://dell.archive.canonical.com/ jammy somerville-tentacool
-# deb-src http://dell.archive.canonical.com/ jammy somerville-tentacool
-xps13-1
-cat <<"xps13-2" | sudo tee /etc/apt/sources.list.d/oem-solutions-engineers-ubuntu-oem-projects-meta-jammy.list
-deb https://ppa.launchpadcontent.net/oem-solutions-engineers/oem-projects-meta/ubuntu/ jammy main
+sudo add-apt-repository ppa:oem-solutions-group/intel-ipu6
+sudo add-apt-repository ppa:oem-solutions-engineers/oem-projects-meta
+#cat <<"xps13-1" | sudo tee /etc/apt/sources.list.d/oem-somerville-tentacool-meta.list
+#deb http://dell.archive.canonical.com/ jammy somerville
+## deb-src http://dell.archive.canonical.com/ jammy somerville
+#deb http://dell.archive.canonical.com/ jammy somerville-tentacool
+## deb-src http://dell.archive.canonical.com/ jammy somerville-tentacool
+#xps13-1
+#cat <<"xps13-2" | sudo tee /etc/apt/sources.list.d/oem-solutions-engineers-ubuntu-oem-projects-meta-jammy.list
+#deb https://ppa.launchpadcontent.net/oem-solutions-engineers/oem-projects-meta/ubuntu/ jammy main
 # deb-src https://ppa.launchpadcontent.net/oem-solutions-engineers/oem-projects-meta/ubuntu/ jammy main
-xps13-2
+#xps13-2
 
 # Activate Repos and update list
 sudo add-apt-repository universe -y
@@ -59,8 +61,7 @@ sudo apt install \
     libfprint-2-tod1 \
     libfprint-2-tod-dev \
     libpam-fprintd \
-    libcamhal-ipu6ep-common \
-    libipu6ep \
+    libcamhal-ipu6ep0 \
     gstreamer1.0-icamera \
     inxi \
     alsa-base \
