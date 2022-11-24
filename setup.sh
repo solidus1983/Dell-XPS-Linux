@@ -38,16 +38,16 @@ read -p "Is this Device an Precision 5760 (y/n)" choice
 echo "Install Kernel and Drivers for Precision 5760"
 sudo add-apt-repository ppa:oem-solutions-group/intel-ipu6
 sudo add-apt-repository ppa:oem-solutions-engineers/oem-projects-meta
-#cat <<"p5760-1" | sudo tee /etc/apt/sources.list.d/oem-somerville-stantler-meta.list
-#deb http://dell.archive.canonical.com/ jammy somerville
-## deb-src http://dell.archive.canonical.com/ jammy somerville
-#deb http://dell.archive.canonical.com/ jammy somerville-stantler
-## deb-src http://dell.archive.canonical.com/ jammy somerville-stantler
-#p5760-1
-#cat <<"p5760-2" | sudo tee /etc/apt/sources.list.d/oem-solutions-engineers-ubuntu-oem-projects-meta-jammy.list
-#deb https://ppa.launchpadcontent.net/oem-solutions-engineers/oem-projects-meta/ubuntu/ jammy main
-# deb-src https://ppa.launchpadcontent.net/oem-solutions-engineers/oem-projects-meta/ubuntu/ jammy main
-#p5760-2
+cat <<"p5760-1" | sudo tee /etc/apt/sources.list.d/oem-somerville-stantler-meta.list
+deb http://dell.archive.canonical.com/ jammy somerville
+# deb-src http://dell.archive.canonical.com/ jammy somerville
+deb http://dell.archive.canonical.com/ jammy somerville-stantler
+# deb-src http://dell.archive.canonical.com/ jammy somerville-stantler
+p5760-1
+cat <<"p5760-2" | sudo tee /etc/apt/sources.list.d/oem-solutions-engineers-ubuntu-oem-projects-meta-jammy.list
+deb https://ppa.launchpadcontent.net/oem-solutions-engineers/oem-projects-meta/ubuntu/ jammy main
+ deb-src https://ppa.launchpadcontent.net/oem-solutions-engineers/oem-projects-meta/ubuntu/ jammy main
+p5760-2
 
 # Activate Repos and update list
 sudo add-apt-repository universe -y
